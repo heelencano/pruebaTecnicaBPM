@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html xmlns:th="https://www.thymeleaf.org">
+<head>
+<meta charset="utf-8">
+<title>Empleados</title>
+<link rel="stylesheet"
+	href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css"
+	integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+	crossorigin="anonymous">
+</head>
+<body>
+	<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+		<div class="container-fluid">
+			<a class="navbar-brand" href="/">Inicio</a>
+			<button class="navbar-toggler" type="button"
+				data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup"
+				aria-controls="navbarNavAltMarkup" aria-expanded="false"
+				aria-label="Toggle navigation">
+				<span class="navbar-toggler-icon"></span>
+			</button>
+			<div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+				<div class="navbar-nav">
+					<a class="nav-link" th:href="@{/categorias}">Rol Empleados</a> 
+					<a class="nav-link" th:href="@{/empleados}">Empleado</a>
+					<a class="nav-link" th:href="@{/solicitudes}">Solicitud</a>
+				</div>
+			</div>
+		</div>
+	</nav>
+	<div class="container text-center" style="margin-top:90px">
+		<div class="row row-cols-1 row-cols-md-2 g-4">
+	<div class="col">
+			<div class="card">
+				<div class="card-body">
+					<h5 class="card-title">Listado Rol Empleado</h5>
+					<p class="card-text">Apartado donde se podra visualizar una lista de los roles para los empleados registrados</p>
+					<a class="btn btn-info" th:href="@{/categorias}">Rol Empleado</a>
+				</div>
+			</div>
+		</div>
+		<div class="col">
+			<div class="card">
+				<div class="card-body">
+					<h5 class="card-title">Listado Empleados</h5>
+					<p class="card-text">Apartado donde se podra visualizar una lista con todos los empleados registrados y las relaciones con las otras entidades</p>
+					<a class="btn btn-info" th:href="@{/empleados}">Empleado</a>
+				</div>
+			</div>
+		</div>
+		<div class="col">
+			<div class="card">
+				<div class="card-body">
+					<h5 class="card-title">Listado Solicitud</h5>
+					<p class="card-text">Apartado donde se podra visualizar una lista con todas las solicitudes registradas y la relación con la entidad empleado</p>
+					<a class="btn btn-info" th:href="@{/solicitudes}">Solicitud</a>
+				</div>
+			</div>
+		</div>
+	</div>
+	</div>
+</body>
+</html>
